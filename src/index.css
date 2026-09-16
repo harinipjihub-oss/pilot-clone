@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply m-0 p-0 font-sans bg-gray-50 text-slate-800;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+.nav-icon.active {
+    background-color: #2b3040;
+    color: white;
+    border-radius: 8px;
+}
+/* Members Layout System */
+.layout-list {
+    display: flex;
+    flex-direction: column;
+}
+.layout-list .member-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    position: relative;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0.25rem;
+}
+.layout-list .member-item:hover {
+    background-color: #f8fafc;
+}
+.layout-list .member-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.layout-list .hover-actions {
+    position: absolute;
+    right: 1rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f8fafc;
+    padding-left: 1rem;
+}
+.layout-list .member-item:hover .hover-actions {
+    opacity: 1;
+}
+.layout-list .member-badge {
+    transition: opacity 0.2s;
+}
+.layout-list .member-item:hover .member-badge {
+    opacity: 0;
+}
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+}
+.layout-grid .member-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: all 0.2s;
+    background: white;
+    position: relative;
+}
+.layout-grid .member-item:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+.layout-grid .member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.layout-grid .member-avatar {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+.layout-grid .member-badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+.layout-grid .hover-actions {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateY(4px);
+}
+.layout-grid .member-item:hover .hover-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
