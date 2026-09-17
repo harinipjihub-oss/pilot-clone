@@ -614,6 +614,94 @@ h1 {
   margin-top: 3px;
 }
 
+.todayOverview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.todayHoursPanel,
+.todayDeadlinePanel {
+  min-height: 185px;
+}
+
+.todayHoursSummary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 14px 5px 12px;
+}
+
+.todayHoursSummary strong {
+  font-size: 27px;
+}
+
+.todayHoursSummary span,
+.todayHoursMeta {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.todayHoursBar {
+  height: 12px;
+  margin: 0 5px;
+  background: #edf0f4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.todayHoursBar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), #7d88f4);
+  border-radius: inherit;
+}
+
+.todayHoursMeta {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 5px 0;
+}
+
+.todayHoursMeta strong {
+  color: var(--text);
+  font-size: 9px;
+}
+
+.todayDeadlineCount {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 14px 5px 10px;
+}
+
+.todayDeadlineCount strong {
+  color: var(--orange);
+  font-size: 30px;
+}
+
+.todayDeadlineCount span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.todayDeadlineList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.todayDeadlineList span {
+  min-height: 38px;
+  padding: 8px;
+  border-left: 3px solid var(--orange);
+  background: #fff8ed;
+  color: #6f6251;
+  font-size: 8px;
+  line-height: 1.35;
+}
+
 .arrow {
   position: absolute;
   right: 13px;
@@ -2153,6 +2241,304 @@ h1 {
   font-size: 9px;
 }
 
+/* MY WORKS REFERENCE VIEW */
+
+.worksHeader {
+  margin-bottom: 17px;
+}
+
+.worksHeader h1 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.worksActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.secondaryButton,
+.primaryButton,
+.exportButton {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: white;
+  color: var(--text);
+  padding: 7px 10px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.primaryButton {
+  background: #182136;
+  color: white;
+  border-color: #182136;
+}
+
+.monthSelector {
+  gap: 0;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.monthSelector button {
+  width: auto;
+  height: auto;
+  padding: 7px 10px;
+  border-radius: 0;
+  background: white;
+  color: #536078;
+  font-size: 9px;
+}
+
+.monthSelector strong {
+  padding: 7px 11px;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  font-size: 9px;
+}
+
+.weekSelector {
+  margin-bottom: 13px;
+  border: 0;
+  padding: 0;
+  gap: 6px;
+  background: transparent;
+}
+
+.weekSelector button {
+  border: 1px solid transparent;
+  background: #f5f7fa;
+  color: #536078;
+  padding: 7px 11px;
+  border-radius: 14px;
+  font-size: 9px;
+}
+
+.weekSelector button.selected {
+  background: #d8f1ff;
+  border-color: #8ad2f6;
+  color: #0873ad;
+}
+
+.worksTabs {
+  display: flex;
+  gap: 19px;
+  border-bottom: 1px solid #dbe2eb;
+  margin-bottom: 15px;
+}
+
+.worksTabs button {
+  border: 0;
+  background: transparent;
+  padding: 0 2px 9px;
+  color: #60708a;
+  font-size: 10px;
+}
+
+.worksTabs button.selected {
+  color: #0873ad;
+  font-weight: 700;
+  border-bottom: 2px solid #168dd0;
+}
+
+.worksMetrics {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.worksMetrics .metric {
+  min-height: 58px;
+  padding: 11px;
+  border-radius: 5px;
+}
+
+.worksMetrics .metric > strong {
+  font-size: 14px;
+  margin-top: 9px;
+}
+
+.worksMetrics .metric label {
+  font-size: 8px;
+}
+
+.worksToolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.worksSearch,
+.worksToolbar select {
+  height: 27px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: white;
+  color: #8a94a7;
+  font-size: 9px;
+}
+
+.worksSearch {
+  width: 210px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 8px;
+}
+
+.worksSearch input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 9px;
+}
+
+.worksToolbar select {
+  width: 106px;
+  padding: 0 7px;
+}
+
+.exportButton {
+  margin-left: auto;
+  padding: 6px 9px;
+  color: #168b57;
+}
+
+.activityTable {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.activityTableHead,
+.activityTableRow {
+  display: grid;
+  grid-template-columns: 1.45fr repeat(7, 1fr) 0.65fr;
+  align-items: stretch;
+}
+
+.activityTableHead {
+  min-height: 32px;
+  background: #f5f8fb;
+  color: #52647e;
+  font-size: 7px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.activityTableHead span {
+  padding: 7px 4px;
+  border-right: 1px solid #e0e7ef;
+}
+
+.activityTableHead span:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.activityTableHead b {
+  color: #1285c4;
+  font-size: 6px;
+}
+
+.activityTableRow {
+  min-height: 66px;
+  border-top: 1px solid #e7ecf2;
+  font-size: 9px;
+  text-align: center;
+}
+
+.activityTableRow > * {
+  display: grid;
+  place-items: center;
+  border-right: 1px solid #e7ecf2;
+}
+
+.activityTableRow > div {
+  place-items: start;
+  padding: 9px 10px;
+}
+
+.activityTableRow strong {
+  font-size: 9px;
+}
+
+.activityTableRow small {
+  color: #718099;
+  font-size: 7px;
+  margin-top: 3px;
+}
+
+.activityTableRow .empty {
+  color: #c5ceda;
+}
+
+.activityTableRow .logged {
+  background: #eaf7fe;
+  color: #087ebd;
+  font-weight: 700;
+}
+
+.worksCharts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.trendChart,
+.distributionChart {
+  min-height: 196px;
+}
+
+.chartPlot {
+  height: 105px;
+  margin: 8px 12px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-bottom: 1px solid #dfe6ee;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 25px, #e1e8f0 26px);
+}
+
+.chartPlot i {
+  width: 42px;
+  background: #bdd9f8;
+  border-radius: 3px 3px 0 0;
+}
+
+.chartPlot i.current {
+  background: #2160f5;
+}
+
+.chartLabels {
+  display: flex;
+  justify-content: space-around;
+  color: #65748a;
+  font-size: 7px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.distributionChart .activityBar {
+  margin: 13px 12px 17px;
+}
+
+.distributionChart .activityBar > div:first-child {
+  font-size: 8px;
+}
+
+.distributionChart .activityTrack {
+  height: 6px;
+}
+
+.ledgerPanel {
+  padding-bottom: 8px;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
@@ -2229,6 +2615,10 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .todayOverview {
+    grid-template-columns: 1fr;
+  }
+
   .priorityCards {
     grid-template-columns: 1fr;
   }
@@ -2246,6 +2636,10 @@ h1 {
   .attentionGrid,
   .metricStrip,
   .kanban {
+    grid-template-columns: 1fr;
+  }
+
+  .todayDeadlineList {
     grid-template-columns: 1fr;
   }
 
@@ -2293,4 +2687,323 @@ h1 {
   .searchBox {
     width: 170px;
   }
+}
+
+/* Dashboard Project Dropdown and custom styles */
+.projectSelectContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.projectDropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+  z-index: 100;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.projectDropdownMenu button {
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.projectDropdownMenu button:hover {
+  background: var(--bg);
+}
+
+.projectDropdownMenu button .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.priorityStatusPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.dashboardControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboardProjectSelect {
+  min-width: 170px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: white;
+  color: var(--text);
+  padding: 9px 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.customRange {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: -8px 0 14px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.customRange label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.customRange input {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: white;
+  color: var(--text);
+  padding: 5px 7px;
+  font-size: 9px;
+}
+
+.customRange span {
+  color: #8a94a7;
+}
+
+.projectStoryChart {
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.storyChartHeader,
+.sprintHeadline,
+.sprintMeta,
+.priorityBarRow > div:first-child,
+.burnoutScale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.storyChartHeader strong {
+  font-size: 10px;
+}
+
+.storyChartHeader span,
+.sprintHeadline span,
+.sprintMeta,
+.priorityBarRow span,
+.burnoutScale {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.storyBars {
+  height: 142px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+  margin-top: 13px;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 34px, #edf0f4 35px);
+}
+
+.storyBar {
+  height: 100%;
+  width: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+
+.storyBar i {
+  width: 100%;
+  display: block;
+  background: var(--blue);
+  border-radius: 5px 5px 0 0;
+}
+
+.storyBar small {
+  color: var(--muted);
+  font-size: 8px;
+  transform: translateY(16px);
+}
+
+.burnoutChart {
+  padding: 14px 25px 8px;
+}
+
+.burnoutRing {
+  width: 142px;
+  height: 142px;
+  margin: auto;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: conic-gradient(var(--orange) var(--burnout), #edf0f4 0);
+  position: relative;
+}
+
+.burnoutRing::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  background: white;
+}
+
+.burnoutRing strong,
+.burnoutRing span {
+  position: relative;
+  z-index: 1;
+}
+
+.burnoutRing strong {
+  font-size: 25px;
+}
+
+.burnoutRing span {
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.burnoutScale {
+  margin-top: 10px;
+}
+
+.burnoutNotes {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.burnoutNotes strong,
+.healthyText {
+  color: var(--green);
+}
+
+.sprintSummary {
+  padding: 4px 5px;
+}
+
+.sprintHeadline strong {
+  font-size: 25px;
+}
+
+.sprintBar,
+.priorityTrack {
+  height: 8px;
+  background: #eef0f4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sprintBar {
+  margin: 18px 0 15px;
+}
+
+.sprintBar span,
+.priorityTrack i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue);
+}
+
+.sprintMeta {
+  padding: 9px 0;
+  border-top: 1px solid var(--border);
+}
+
+.priorityBarRow > div:first-child {
+  margin-bottom: 6px;
+}
+
+.priorityBarRow strong {
+  font-size: 10px;
+}
+
+.priorityTrack i.red { background: var(--red); }
+.priorityTrack i.orange { background: var(--orange); }
+.priorityTrack i.green { background: var(--green); }
+.priorityTrack i.purple { background: var(--purple); }
+
+.projectHeatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 26px;
+  gap: 6px;
+}
+
+.projectHeatmap .heat {
+  border-radius: 5px;
+}
+
+@media (max-width: 850px) {
+  .dashboardControls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .dashboardProjectSelect {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .rangeControl {
+    overflow-x: auto;
+  }
+
+  .dashboardProjectSelect {
+    min-width: 100%;
+  }
+
+  .customRange {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.priorityBarRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.priorityBarRow strong {
+  font-size: 11px;
+}
+
+.priorityBarRow span {
+  font-size: 11px;
+  color: var(--muted);
 }
